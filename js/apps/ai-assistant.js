@@ -7,7 +7,7 @@ Puter.Registry.register({
     const settingsKey = 'LUMEN_AI_SETTINGS_V1';
     // Demo fallback — used when the user hasn't entered their own key.
     // NOTE: anyone who opens the site can read this in DevTools. Treat as burner.
-    const DEFAULT_PROVIDER = { provider:'gemini', apiKey:'AIzaSyDLH9LnCyBsRcdaG0okSEByQWmobV0zeWw', model:'gemini-2.0-flash-lite' };
+    const DEFAULT_PROVIDER = { provider:'gemini', apiKey:'', model:'gemini-2.0-flash-lite' };
     function loadSettings(){
       try {
         const s = JSON.parse(localStorage.getItem(settingsKey) || '{}');
