@@ -1,0 +1,42 @@
+.window{
+  position:absolute;min-width:280px;min-height:180px;
+  background:var(--window-bg);color:var(--fg);
+  border:1px solid var(--border);border-radius:var(--radius-lg);
+  box-shadow:var(--window-shadow);
+  display:flex;flex-direction:column;overflow:hidden;
+  transform-origin:center center;
+  animation:winOpen .22s cubic-bezier(.2,.9,.3,1.1);
+}
+@keyframes winOpen{
+  from{opacity:0;transform:scale(.88) translateY(8px)}
+  to{opacity:1;transform:none}
+}
+.window.closing{
+  animation:winClose .18s ease-in forwards;
+}
+@keyframes winClose{
+  to{opacity:0;transform:scale(.92) translateY(4px)}
+}
+.window.maximized{top:0 !important;left:0 !important;width:100% !important;height:100% !important;border-radius:0;border:none}
+.window.minimized{display:none}
+.window-header{
+  height:36px;background:var(--window-header);display:flex;align-items:center;
+  padding:0 6px 0 12px;gap:8px;cursor:move;user-select:none;
+  border-bottom:1px solid var(--border);
+}
+.window-header .win-icon{width:18px;height:18px}
+.window-header .win-title{flex:1;font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.window-header .win-buttons{display:flex;gap:2px}
+.window-header .win-buttons button{
+  width:32px;height:28px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:14px;
+}
+.window-header .win-buttons button:hover{background:var(--bg-hover)}
+.window-header .win-buttons .win-close:hover{background:#e63946;color:#fff}
+
+.window-body{flex:1;overflow:auto;background:var(--window-bg);position:relative}
+
+.window .resize-handle{
+  position:absolute;width:10px;height:10px;right:0;bottom:0;cursor:se-resize;z-index:2;
+}
+
+.window.focused{box-shadow:0 22px 60px rgba(20,30,60,0.28),0 2px 8px rgba(20,30,60,0.15)}

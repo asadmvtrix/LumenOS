@@ -1,0 +1,27 @@
+#desktop{
+  position:fixed;inset:0;
+  background-color:#0a0d1a;
+  background-image:url("../assets/images/wallpaper.webp");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  image-rendering:-webkit-optimize-contrast;
+}
+#desktop-icons{
+  position:absolute;inset:0 0 48px 0;
+  display:grid;grid-auto-flow:column;grid-template-rows:repeat(auto-fill,92px);grid-auto-columns:96px;
+  gap:4px;padding:12px;align-content:start;
+}
+.desktop-icon{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  padding:6px 4px;border-radius:6px;cursor:pointer;color:#fff;
+  text-shadow:0 1px 2px rgba(0,0,0,.6);
+}
+.desktop-icon:hover{background:rgba(255,255,255,.14)}
+.desktop-icon.selected{background:rgba(59,109,247,.35);outline:1px solid rgba(255,255,255,.5)}
+.desktop-icon img{width:48px;height:48px;pointer-events:none}
+.desktop-icon span{font-size:12px;text-align:center;line-height:1.2;word-break:break-word;max-width:90px}
+
+#windows-layer{position:absolute;inset:0 0 48px 0;pointer-events:none}
+#windows-layer > *{pointer-events:auto}

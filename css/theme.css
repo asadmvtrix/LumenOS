@@ -1,0 +1,36 @@
+:root{
+  --fg:#1c1c1f;
+  --fg-muted:#5b5b63;
+  --bg:#f3f5f8;
+  --bg-elev:#ffffff;
+  --bg-hover:#e9ecf2;
+  --bg-active:#dde2ec;
+  --border:#d0d5dd;
+  --accent:#3b6df7;
+  --accent-fg:#ffffff;
+  --taskbar-bg:rgba(245,247,250,0.78);
+  --taskbar-border:rgba(0,0,0,0.08);
+  --window-bg:#ffffff;
+  --window-header:#eef1f6;
+  --window-shadow:0 18px 50px rgba(20,30,60,0.22),0 2px 6px rgba(20,30,60,0.1);
+  --radius:8px;
+  --radius-lg:12px;
+}
+body.theme-dark{
+  --fg:#e8eaee;
+  --fg-muted:#9ba0ab;
+  --bg:#12141a;
+  --bg-elev:#1d2029;
+  --bg-hover:#262a36;
+  --bg-active:#323747;
+  --border:#343849;
+  --accent:#6f8cff;
+  --accent-fg:#0b0d12;
+  --taskbar-bg:rgba(18,20,26,0.78);
+  --taskbar-border:rgba(255,255,255,0.08);
+  --window-bg:#1d2029;
+  --window-header:#262a36;
+  --window-shadow:0 18px 60px rgba(0,0,0,0.6),0 2px 8px rgba(0,0,0,0.4);
+}
+
+@keyframes spin{to{transform:rotate(360deg)}}

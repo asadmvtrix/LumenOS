@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>LumenOS</title>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/theme.css" />
+<link rel="stylesheet" href="css/login.css" />
+<link rel="stylesheet" href="css/desktop.css" />
+<link rel="stylesheet" href="css/window.css" />
+<link rel="stylesheet" href="css/taskbar.css" />
+<link rel="stylesheet" href="css/apps.css" />
+<link rel="stylesheet" href="css/browser.css" />
+<link rel="stylesheet" href="css/contextmenu.css" />
+</head>
+<body>
+
+<div id="desktop" class="hidden">
+  <div id="desktop-icons"></div>
+  <div id="windows-layer"></div>
+  <div id="contextmenu-layer"></div>
+  <div id="dialog-layer"></div>
+
+  <div id="taskbar">
+    <button id="start-btn" title="Start">
+      <img src="assets/icons/start.svg" alt="" />
+    </button>
+    <div id="taskbar-apps"></div>
+    <div id="tray">
+      <span id="clock">--:--</span>
+    </div>
+  </div>
+
+  <div id="start-menu" class="hidden">
+    <div class="start-header">
+      <img src="assets/icons/logo-lumen.svg" alt="" />
+      <span id="start-username">LumenOS</span>
+    </div>
+    <div id="start-apps"></div>
+    <div class="start-footer">
+      <button id="start-settings"><img src="assets/icons/cog.svg" alt="" /> Settings</button>
+      <button id="start-lock"><img src="assets/icons/user.svg" alt="" /> Sign out</button>
+    </div>
+  </div>
+</div>
+
+<!-- Core -->
+<script src="js/core/util.js"></script>
+<script src="js/core/events.js"></script>
+<script src="js/fs/vfs.js"></script>
+<script src="js/core/contextmenu.js"></script>
+<script src="js/core/dialog.js"></script>
+<script src="js/core/window.js"></script>
+<script src="js/core/taskbar.js"></script>
+<script src="js/core/desktop.js"></script>
+<script src="js/core/registry.js"></script>
+<script src="js/core/login.js"></script>
+
+<!-- Apps -->
+<script src="js/apps/about.js"></script>
+<script src="js/apps/notepad.js"></script>
+<script src="js/apps/code-editor.js"></script>
+<script src="js/apps/calculator.js"></script>
+<script src="js/apps/paint.js"></script>
+<script src="js/apps/media-player.js"></script>
+<script src="js/apps/browser.js"></script>
+<script src="js/apps/downloader.js"></script>
+<script src="js/apps/ai-assistant.js"></script>
+<script src="js/apps/terminal.js"></script>
+<script src="js/apps/clock.js"></script>
+<script src="js/apps/settings.js"></script>
+<script src="js/apps/file-explorer.js"></script>
+
+<script src="js/core/boot.js"></script>
+</body>
+</html>

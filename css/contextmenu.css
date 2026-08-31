@@ -1,0 +1,20 @@
+.ctxmenu{
+  position:absolute;min-width:180px;background:var(--window-bg);color:var(--fg);
+  border:1px solid var(--border);border-radius:6px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);padding:4px;z-index:1000;font-size:13px;
+}
+.ctxmenu .item{padding:6px 10px;border-radius:4px;cursor:pointer;display:flex;gap:8px;align-items:center}
+.ctxmenu .item:hover{background:var(--bg-hover)}
+.ctxmenu .item.disabled{opacity:.45;cursor:default}
+.ctxmenu .item.disabled:hover{background:transparent}
+.ctxmenu .sep{height:1px;background:var(--border);margin:4px 2px}
+
+.dialog-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.25);z-index:800;display:flex;align-items:center;justify-content:center}
+.dialog{background:var(--window-bg);border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--window-shadow);min-width:320px;max-width:480px;padding:18px}
+.dialog h3{margin-bottom:8px;font-size:15px}
+.dialog p{color:var(--fg-muted);margin-bottom:12px;font-size:13px}
+.dialog input[type=text]{width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:6px;background:var(--bg-elev);color:var(--fg);margin-bottom:12px}
+.dialog .actions{display:flex;justify-content:flex-end;gap:8px}
+.dialog button{padding:7px 14px;border-radius:6px;background:var(--bg-hover);color:var(--fg)}
+.dialog button.primary{background:var(--accent);color:var(--accent-fg)}
+.dialog button:hover{filter:brightness(.95)}
